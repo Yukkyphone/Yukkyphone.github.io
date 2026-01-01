@@ -64,16 +64,20 @@ p {
     justify-content: center; /* メニューを真ん中に寄せる */
 }
 
-/* 各メニュー項目（li）の設定 */
+/* 各メニュー項目(li)の設定 */
+.navbar li {
+    /* 150pxを最大(max)として、それより狭ければ100%幅を5等分する */
+    width: 150px; 
+    max-width: 20%; /* 5項目あるので、1つあたり最大20%以上にはならない */
+}
+
 .navbar li a {
     display: block;
-    padding: 15px 25px;
+    padding: 15px 0;
     color: white;
     text-decoration: none;
-    font-size: 1rem;       /* 少し大きく */
-    font-weight: 500;      /* 少し太く */
-    letter-spacing: 0.05em; /* 文字間隔を微調整 */
-    transition: 0.3s;
+    font-size: clamp(0.7rem, 2vw, 1rem); /* 画面幅に合わせて文字サイズも自動伸縮！ */
+    text-align: center;
 }
 
 /* マウスを乗せた（ホバー）時の色変更 */
@@ -89,21 +93,4 @@ footer {
     color: rgba(255, 255, 255, 0.6); /* 少し薄い白にして目立ちすぎないように */
     font-size: 0.8rem;
     text-align: center;
-}
-/* 画面の横幅が600px以下の時（スマホなど）だけに適用されるルール */
-@media (max-width: 600px) {
-    .navbar ul {
-        display: flex;
-        width: 100%;
-    }
-
-    .navbar li {
-        flex: 1; /* 全てのメニュー項目を同じ幅で均等に広げる */
-        text-align: center;
-    }
-
-    .navbar li a {
-        padding: 15px 5px; /* 左右の余白を削って、文字が入りきるようにする */
-        font-size: 0.8rem;   /* 文字サイズを少し小さくする */
-    }
 }
