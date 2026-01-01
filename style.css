@@ -9,7 +9,7 @@ body {
     /* linear-gradientを「先に」書くのがルールです。0.6は透明度（0が透明、1が不透明） */
     background-image: 
         linear-gradient(rgba(63, 63, 63, 0.6), rgba(63, 63, 63, 0.6)), 
-        url("Touhou_Charactars_1a.jpg"); 
+        url("Touhou_Characters_1a.jpg"); 
     
     background-size: cover;
     background-position: center;
