@@ -90,3 +90,20 @@ footer {
     font-size: 0.8rem;
     text-align: center;
 }
+/* 画面の横幅が600px以下の時（スマホなど）だけに適用されるルール */
+@media (max-width: 600px) {
+    .navbar ul {
+        display: flex;
+        width: 100%;
+    }
+
+    .navbar li {
+        flex: 1; /* 全てのメニュー項目を同じ幅で均等に広げる */
+        text-align: center;
+    }
+
+    .navbar li a {
+        padding: 15px 5px; /* 左右の余白を削って、文字が入りきるようにする */
+        font-size: 0.8rem;   /* 文字サイズを少し小さくする */
+    }
+}
