@@ -2,38 +2,41 @@
 body {
     margin: 0;
     padding: 0;
-    height: 100vh; /* 画面の高さいっぱいに広げる */
-    display: flex;
-    align-items: center;    /* 垂直方向に中央寄せ */
-    justify-content: center; /* 水平方向に中央寄せ */
+    min-height: 100vh;
     font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
     
-    /* 背景画像の設定 */
-    /* linear-gradient で半透明のグレー（rgbaの最後の0.6が濃さ）を画像の上に重ねる */
+    /* 背景画像と半透明グレーの重ね合わせ */
+    /* linear-gradientを「先に」書くのがルールです。0.6は透明度（0が透明、1が不透明） */
     background-image: 
-        linear-gradient(rgba(80, 80, 80, 0.6), rgba(80, 80, 80, 0.6)), 
-        url("Touhou_Charactars_1a.jpg"); /* ←ここを自分の画像ファイル名（例: my-image.png）に変える */
+        linear-gradient(rgba(63, 63, 63, 0.6), rgba(63, 63, 63, 0.6)), 
+        url("Touhou_Charactars_1a.jpg"); 
     
-    background-size: cover;      /* 画像を隙間なく表示 */
-    background-position: center; /* 画像の真ん中を表示 */
-    background-attachment: fixed; /* スクロールしても背景を動かさない */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    /* 文字を上側に配置するための設定 */
+    display: flex;
+    flex-direction: column; /* 縦に並べる */
+    align-items: center;    /* 左右は中央 */
+    justify-content: flex-start; /* 上詰めに変更（ここがポイント！） */
 }
 
 /* 文字が入る箱のデザイン */
 .content {
     text-align: center;
-    color: white;           /* 文字を白にする */
-    text-shadow: 0 2px 4px rgba(0,0,0,0.5); /* 文字に影をつけてさらに見やすく */
-    padding: 20px;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    padding-top: 80px; /* 上からの距離を調整（メニューバーのスペースを空けておく） */
 }
 
 h1 {
-    font-size: 4rem;
+    font-size: 3.5rem;
     margin-bottom: 10px;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.15em;
 }
 
 p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     opacity: 0.9;
 }
