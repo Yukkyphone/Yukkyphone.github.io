@@ -20,6 +20,11 @@ body {
     flex-direction: column; /* 縦に並べる */
     align-items: center;    /* 左右は中央 */
     justify-content: flex-start; /* 上詰めに変更（ここがポイント！） */
+
+    /* footerを一番下へ */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* これがあるから、footerが一番下に押し出される */
 }
 
 /* 文字が入る箱のデザイン */
@@ -74,4 +79,14 @@ p {
 /* マウスを乗せた（ホバー）時の色変更 */
 .navbar li a:hover {
     background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* コピーライトを下部へ */
+footer {
+    width: 100%;
+    padding: 20px 0;
+    margin-top: auto; /* コンテンツが少ない時も一番下に配置されるようにする */
+    color: rgba(255, 255, 255, 0.6); /* 少し薄い白にして目立ちすぎないように */
+    font-size: 0.8rem;
+    text-align: center;
 }
