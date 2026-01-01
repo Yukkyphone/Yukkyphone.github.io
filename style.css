@@ -40,3 +40,38 @@ p {
     font-size: 1.1rem;
     opacity: 0.9;
 }
+/* メニューバー全体の設定 */
+.navbar {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* 背景を少し濃い半透明に */
+    position: fixed; /* 画面の上部に固定 */
+    top: 0;
+    left: 0;
+    z-index: 100;    /* 他の要素より上に表示 */
+}
+
+/* メニューのリスト（ul）を横並びにする */
+.navbar ul {
+    list-style: none; /* 点（・）を消す */
+    margin: 0;
+    padding: 0;
+    display: flex;    /* 横並びにする魔法 */
+    justify-content: center; /* メニューを真ん中に寄せる */
+}
+
+/* 各メニュー項目（li）の設定 */
+.navbar li a {
+    display: block;
+    padding: 15px 25px;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;       /* 少し大きく */
+    font-weight: 500;      /* 少し太く */
+    letter-spacing: 0.05em; /* 文字間隔を微調整 */
+    transition: 0.3s;
+}
+
+/* マウスを乗せた（ホバー）時の色変更 */
+.navbar li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
