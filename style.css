@@ -1,0 +1,39 @@
+/* サイト全体の基本設定 */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* 画面の高さいっぱいに広げる */
+    display: flex;
+    align-items: center;    /* 垂直方向に中央寄せ */
+    justify-content: center; /* 水平方向に中央寄せ */
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+    
+    /* 背景画像の設定 */
+    /* linear-gradient で半透明のグレー（rgbaの最後の0.6が濃さ）を画像の上に重ねる */
+    background-image: 
+        linear-gradient(rgba(80, 80, 80, 0.6), rgba(80, 80, 80, 0.6)), 
+        url("Touhou_Charactars_1a.jpg"); /* ←ここを自分の画像ファイル名（例: my-image.png）に変える */
+    
+    background-size: cover;      /* 画像を隙間なく表示 */
+    background-position: center; /* 画像の真ん中を表示 */
+    background-attachment: fixed; /* スクロールしても背景を動かさない */
+}
+
+/* 文字が入る箱のデザイン */
+.content {
+    text-align: center;
+    color: white;           /* 文字を白にする */
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5); /* 文字に影をつけてさらに見やすく */
+    padding: 20px;
+}
+
+h1 {
+    font-size: 4rem;
+    margin-bottom: 10px;
+    letter-spacing: 0.1em;
+}
+
+p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
