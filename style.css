@@ -9,10 +9,10 @@ body {
     /* linear-gradientを「先に」書くのがルールです。0.6は透明度（0が透明、1が不透明） */
     background-image: 
         linear-gradient(rgba(63, 63, 63, 0.6), rgba(63, 63, 63, 0.6)), 
-        url("Touhou_Characters_1a.jpg"); 
+        url("Touhou_MarisaKirisame_1x.jpg"); 
     
     background-size: cover;
-    background-position: center;
+    background-position: center top;
     background-attachment: fixed;
 
     /* 文字を上側に配置するための設定 */
