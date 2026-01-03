@@ -41,13 +41,6 @@ body {
     padding-right: 10%;
 }
 
-/* index.html 内の content だけ上書き */
-.index-page .content {
-    text-align: center;  /* 中央揃え */
-    padding-left: 0;     /* 余白をリセット */
-    padding-right: 0;
-}
-
 h1 {
     font-size: 3.5rem;
     margin-bottom: 10px;
