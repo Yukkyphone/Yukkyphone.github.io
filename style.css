@@ -43,8 +43,12 @@ body {
 
 h1 {
     font-size: 3.5rem;
-    margin-bottom: 10px;
-    letter-spacing: 0.15em;
+    margin-bottom: 20px;
+    letter-spacing: 0.05em; 
+    /* アンダーラインの設定 */
+    border-bottom: 3px solid white; /* 白い3pxの線 */
+    display: inline-block;          /* 文字の幅に合わせて線を引く */
+    padding-bottom: 5px;            /* 文字と線の間の隙間 */
 }
 
 p {
