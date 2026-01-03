@@ -13,7 +13,7 @@ body {
     
     background-size: cover;
     background-position: center top;
-    background-attachment: fixed;
+    background-attachment: scroll;
 
     /* 文字を上側に配置するための設定 */
     display: flex;
@@ -51,8 +51,16 @@ h1 {
     padding-bottom: 5px;            /* 文字と線の間の隙間 */
 }
 
+h2 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size:1.75rem;
+}
+
 p {
-    font-size: 1.1rem;
+    font-size: 1.0rem;
     opacity: 0.9;
 }
 /* メニューバー全体の設定 */
