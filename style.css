@@ -18,7 +18,7 @@ body {
     /* 文字を上側に配置するための設定 */
     display: flex;
     flex-direction: column; /* 縦に並べる */
-    align-items: center;    /* 左右は中央 */
+    align-items: flex-start;    /* 左揃え */
     justify-content: flex-start; /* 上詰めに変更（ここがポイント！） */
 
     /* footerを一番下へ */
@@ -29,10 +29,23 @@ body {
 
 /* 文字が入る箱のデザイン */
 .content {
-    text-align: center;
     color: white;
     text-shadow: 0 2px 4px rgba(0,0,0,0.5);
     padding-top: 80px; /* 上からの距離を調整（メニューバーのスペースを空けておく） */
+    width: 100%;         /* 幅をいっぱいにする */
+    box-sizing: border-box; /* paddingを含めた幅計算にする */
+    
+    /* 基本の設定：左揃え + 10%余白 */
+    text-align: left;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+/* index.html 内の content だけ上書き */
+.index-page .content {
+    text-align: center;  /* 中央揃え */
+    padding-left: 0;     /* 余白をリセット */
+    padding-right: 0;
 }
 
 h1 {
