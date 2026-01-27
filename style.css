@@ -112,3 +112,8 @@ footer {
     font-size: 0.8rem;
     text-align: center;
 }
+
+.blog-item p {
+    margin-bottom: 1.5em; /* 段落の下に「文字1.5個分」の空きを作る */
+    line-height: 1.8;      /* 行の間隔を少し広げて読みやすくする */
+}
